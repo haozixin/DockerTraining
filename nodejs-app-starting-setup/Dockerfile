@@ -2,9 +2,9 @@ FROM node
 
 WORKDIR /app
 
-COPY . .
-
 RUN npm install  
+
+COPY . .
 
 EXPOSE 80  
 # expose 80 to our local machine
