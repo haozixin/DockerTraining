@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  mongodb:
+    image: mongo:latest
+    volumes:
+      - data:/data/db
+    env_file:
+      - ./mongodb.env
+  backend:
+    build: ./backend
+  frontend:
+    build: ./frontend
+volumes:
+  data:
